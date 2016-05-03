@@ -13,7 +13,6 @@ int main(int argc, const char * argv[])
 {
     @autoreleasepool
     {
-        BOOL isExit = NO;
         double number;
         char operator;
         
@@ -47,13 +46,14 @@ int main(int argc, const char * argv[])
                     break;
                 }
                 case 'S':
+                case 's':
                 {
                     [myCal setAccumulator: number];
                     break;
                 }
                 case 'E':
+                case 'e':
                 {
-                    isExit = YES;
                     break;
                 }
                 default:
@@ -64,10 +64,8 @@ int main(int argc, const char * argv[])
             }
             NSLog(@"= %lf", [myCal accumulator]);
         }
-        while (isExit == NO);
-
+    while (operator != 'e' && operator != 'E');
+        NSLog(@"End of Calculations");
     }
-    
-    NSLog(@"End of Calculations");
     return 0;
 }
