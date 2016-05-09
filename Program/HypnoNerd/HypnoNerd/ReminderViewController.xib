@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderViewController">
+            <connections>
+                <outlet property="datePicker" destination="uTJ-5O-xhA" id="lnK-QG-vr5"/>
+                <outlet property="view" destination="PNX-UR-BJJ" id="2nI-0D-c3P"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PNX-UR-BJJ">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="uTJ-5O-xhA">
+                    <rect key="frame" x="0.0" y="146" width="600" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="484306525.15904897">
+                        <!--2016-05-07 09:35:25 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXq-Xy-x2J" userLabel="Button - Remind Me">
+                    <rect key="frame" x="262" y="429" width="77" height="30"/>
+                    <state key="normal" title="Remind Me"/>
+                    <connections>
+                        <action selector="addReminder:" destination="-1" eventType="touchUpInside" id="0Jj-P2-cfM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="uTJ-5O-xhA" secondAttribute="trailing" id="2zG-fU-gMq"/>
+                <constraint firstItem="kXq-Xy-x2J" firstAttribute="top" secondItem="uTJ-5O-xhA" secondAttribute="bottom" constant="67" id="7Se-jW-X8g"/>
+                <constraint firstItem="uTJ-5O-xhA" firstAttribute="leading" secondItem="PNX-UR-BJJ" secondAttribute="leading" id="AT9-ai-adD"/>
+                <constraint firstItem="uTJ-5O-xhA" firstAttribute="centerX" secondItem="kXq-Xy-x2J" secondAttribute="centerX" id="VUN-ne-bn4"/>
+                <constraint firstItem="uTJ-5O-xhA" firstAttribute="top" secondItem="PNX-UR-BJJ" secondAttribute="top" constant="146" id="q2o-zW-DVK"/>
+            </constraints>
+            <point key="canvasLocation" x="297" y="210"/>
+        </view>
+    </objects>
+</document>
